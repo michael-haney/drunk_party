@@ -1,31 +1,33 @@
-<p id="notice"><%= notice %></p>
+<div class="page-header">
+  <%= link_to new_drinking_game_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Drinking game
+  <% end %>
+  <h1>Listing drinking_games</h1>
+</div>
 
-<h1>Listing Drinking Games</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Number of people</th>
-      <th>Supplies</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @drinking_games.each do |drinking_game| %>
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
       <tr>
-        <td><%= drinking_game.name %></td>
-        <td><%= drinking_game.number_of_people %></td>
-        <td><%= drinking_game.supplies %></td>
-        <td><%= link_to 'Show', drinking_game %></td>
+            <th>Name</th>
+            <th>Number of people</th>
+            <th>Supplies</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @drinking_games) do |drinking_game| %>
+            <td><%= drinking_game.name %></td>
+            <td><%= drinking_game.number_of_people %></td>
+            <td><%= drinking_game.supplies %></td>
+            <td><%= link_to 'Show', drinking_game %></td>
         <td><%= link_to 'Edit', edit_drinking_game_path(drinking_game) %></td>
         <td><%= link_to 'Destroy', drinking_game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Drinking game', new_drinking_game_path %>
+      <% end %>
+    </tbody>
+  </table>
+</div>
