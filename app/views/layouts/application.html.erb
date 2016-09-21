@@ -17,7 +17,6 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
 <!-- Fixed navbar -->
 <nav id="header" class="navbar navbar-fixed-top">
   <div id="header-container" class="container navbar-container">
@@ -28,15 +27,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a id="brand" class="navbar-brand" href="#">The Drunk Party</a>
+      <a id="brand" class="navbar-brand" href="/">The Drunk Party</a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="#about">Drinking Games</a></li>
-        <li><a href="#about">Brewing</a></li>
-        <li><a href="#about">Beer Clubs</a></li>
-        <li><a href="#about">Beer Suggestions & Decriptions</a></li>
-        <li><a href="#about">Mixology</a></li>
+        <li><a href="index">Drinking Games</a></li>
+        <li><a href="construction">Brewing</a></li>
+        <li><a href="construction">Beer Clubs</a></li>
+        <li><a href="construction">Beer Suggestions & Decriptions</a></li>
+        <li><a href="construction">Mixology</a></li>
         <div class="col-sm-3 col-md-3">
           <form class="navbar-form" role="search">
             <div class="input-group">
@@ -62,5 +61,7 @@
 
     <%= yield %>
   </div>
-</body>
+<footer>
+  <p>© The Drunk Party 2016</p>
+</footer>
 </html>
