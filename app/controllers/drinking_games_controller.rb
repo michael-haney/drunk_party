@@ -1,11 +1,14 @@
 class DrinkingGamesController < ApplicationController
   before_action :set_drinking_game, only: [:show, :edit, :update, :destroy]
+  helper_method :sort_column, :sort_direction
 
   # GET /drinking_games
   # GET /drinking_games.json
   def index
-    @drinking_games = DrinkingGame.all
-  end
+    @drinking_games = DrinkingGame.order(
+      sort_column + ' ' + sort_direction
+    )
+    end
 
   # GET /drinking_games/1
   # GET /drinking_games/1.json
@@ -71,4 +74,12 @@ class DrinkingGamesController < ApplicationController
     def drinking_game_params
       params.require(:drinking_game).permit(:name, :number_of_people, :supplies)
     end
+
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+  end
+
+  def sort_column
+    DrinkingGame.column_names.include?(params[:sort]) ? params[:sort] : "name"
+  end
 end

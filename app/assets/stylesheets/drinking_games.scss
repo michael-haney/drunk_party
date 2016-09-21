@@ -1,3 +1,117 @@
 // Place all the styles related to the drinking_games controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'bootstrap';
+
+th .asc {
+  @extend .glyphicon;
+  @extend .glyphicon-chevron-up;
+  float: right;
+}
+
+th .desc {
+  @extend .glyphicon;
+  @extend .glyphicon-chevron-down;
+  float: right;
+}
+
+html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+body {
+  padding-top: 100px;
+}
+footer {
+  padding: 30px 0;
+}
+
+/*
+ * Custom styles
+ */
+.navbar-brand {
+  font-size: 24px;
+}
+
+.navbar-container {
+  padding: 20px 0 20px 0;
+}
+
+.navbar.navbar-fixed-top.fixed-theme {
+  background-color: #A8A8A1;
+  border-color: #67655D;
+  box-shadow: 0 0 5px rgba(0,0,0,.8);
+}
+
+.navbar-brand.fixed-theme {
+  font-size: 18px;
+}
+
+.navbar-container.fixed-theme {
+  padding: 0;
+}
+
+.navbar-container.fixed-theme,
+.navbar.navbar-fixed-top.fixed-theme,
+.navbar-brand,
+.navbar-container{
+  transition: 0.8s;
+  -webkit-transition:  0.8s;
+}
+
+.nav > li > a:hover{
+  color:#577492;
+  background-color: #D4D8D1;
+}
+
+.navbar-brand:hover{
+  background-color: #D4D8D1;
+}
+
+.navbar-brand{
+  color: #B74934 !important;
+}
+
+h2 {
+  color: #577492 !important;
+}
+
+.jumbotron {
+  position: relative;
+  background: asset_url("beer4.jpg") no-repeat center center;
+  width:100%;
+  height: 230px;
+  background-size: cover;
+}
+
+body {
+  background: #D4D8D1 !important;
+  color: #67655D !important;
+}
+
+input, .actual-edit-overlay {
+  -webkit-text-fill-color: #AA9A66 !important;
+}
+
+
+.btn-default {
+  color: #AA9A66 !important;
+  border-color: #AA9A66 !important;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+  background: #ccc !important;
+}
+
+.btn-primary:active, .btn-primary.active {
+  background: #A8A8A1 !important;
+  box-shadow: none;
+  border-color: #AA9A66 !important;
+}
+
+.btn-primary {
+  background-color: #fff !important;
+  color: #AA9A66 !important;
+  border-color: #AA9A66 !important;
+}
+
