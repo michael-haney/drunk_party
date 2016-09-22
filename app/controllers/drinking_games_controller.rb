@@ -5,9 +5,14 @@ class DrinkingGamesController < ApplicationController
   # GET /drinking_games
   # GET /drinking_games.json
   def index
+    @drinking_games = DrinkingGame.all
+    if params[:search]
+      @drinking_games = DrinkingGame.search(params[:search]).order("created_at DESC")
+    else
     @drinking_games = DrinkingGame.order(
       sort_column + ' ' + sort_direction
     )
+    end
     end
 
   # GET /drinking_games/1

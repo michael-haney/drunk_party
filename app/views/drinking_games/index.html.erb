@@ -31,3 +31,6 @@
     </tbody>
   </table>
 </div>
+<% if @drinking_games.blank? %>
+  <h4>There are no drinking games containing the term <%= params[:search] %>.</h4>
+<% end %>
