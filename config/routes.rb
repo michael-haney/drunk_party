@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   root 'drinking_games#homepage'
   get 'index' => 'drinking_games#index'
   get 'construction' => 'drinking_games#construction'
+  get 'Baseball' => 'descriptions#baseball'
+  get 'Civil War' => 'descriptions#Civil War'
+  get 'Quarters' => 'descriptions#quarters'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

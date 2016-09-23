@@ -25,6 +25,7 @@
             <td><%= drinking_game.number_of_people %></td>
             <td><%= drinking_game.supplies %></td>
             <td><%= link_to 'Show', drinking_game %></td>
+            <td><%= link_to 'Description', drinking_game.name %></td>
         <td><%= link_to 'Edit', edit_drinking_game_path(drinking_game) %></td>
         <td><%= link_to 'Destroy', drinking_game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <% end %>
