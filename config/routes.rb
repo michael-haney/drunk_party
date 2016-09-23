@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'Baseball' => 'descriptions#baseball'
   get 'Civil War' => 'descriptions#Civil War'
   get 'Quarters' => 'descriptions#quarters'
+  get 'Flip Cup' => 'descriptions#Flip Cup'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
