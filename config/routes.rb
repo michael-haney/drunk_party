@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   get 'Civil War' => 'descriptions#Civil War'
   get 'Quarters' => 'descriptions#quarters'
   get 'Flip Cup' => 'descriptions#Flip Cup'
+  get 'solocup' => 'articles#solocup'
+  get 'Wizard Staff' => 'descriptions#Wizard Staff'
+  get '7s, 11s, & Doubles' => 'descriptions#7s, 11s, & Doubles'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
