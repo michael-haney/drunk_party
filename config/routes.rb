@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get 'solocup' => 'articles#solocup'
   get 'Wizard Staff' => 'descriptions#Wizard Staff'
   get '7s, 11s, & Doubles' => 'descriptions#7s, 11s, & Doubles'
+  get 'Asshole' => 'descriptions#Asshole'
+  get 'Kings Cup' => 'descriptions#Kings Cup'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
