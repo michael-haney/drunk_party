@@ -27,6 +27,8 @@ Rails.application.routes.draw do
   get 'Ride the Bus' => 'descriptions#Ride the Bus'
   get 'Speed Quarters' => 'descriptions#Speed Quarters'
   get 'Pyramid' => 'descriptions#Pyramid'
+  get 'Polish Frisbee' => 'descriptions#Polish Frisbee'
+  get 'Bullshit' => 'descriptions#Bullshit'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
